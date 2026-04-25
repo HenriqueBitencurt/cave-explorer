@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dx82q5cbvshxp"]
+
+[ext_resource type="Script" uid="uid://4mh2vfsyglpn" path="res://scripts/slot.gd" id="1_4v6ba"]
+
+[node name="Slot" type="PanelContainer" unique_id=630953161]
+custom_minimum_size = Vector2(48, 48)
+script = ExtResource("1_4v6ba")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=860569864]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="Icone" type="TextureRect" parent="MarginContainer" unique_id=1063052146]
+layout_mode = 2
+expand_mode = 1
+
+[node name="Quantidade" type="Label" parent="." unique_id=1378440748]
+layout_mode = 2
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 2

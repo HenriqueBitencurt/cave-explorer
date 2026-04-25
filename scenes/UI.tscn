@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://6k8sod1w1chu"]
+
+[ext_resource type="Script" uid="uid://d0op54243oy6l" path="res://scripts/inventario.gd" id="1_dj8aq"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1206062857]
+script = ExtResource("1_dj8aq")
+
+[node name="Control" type="Control" parent="." unique_id=1871472171]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Hotbar" type="PanelContainer" parent="Control" unique_id=17886732]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Hotbar" unique_id=1377892886]
+layout_mode = 2
+
+[node name="PainelPrincipal" type="PanelContainer" parent="Control" unique_id=1194417545]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/PainelPrincipal" unique_id=55902272]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/PainelPrincipal/VBoxContainer" unique_id=1755900409]
+layout_mode = 2
+
+[node name="PainelCrafting" type="PanelContainer" parent="Control/PainelPrincipal/VBoxContainer/HBoxContainer" unique_id=152766216]
+custom_minimum_size = Vector2(150, 200)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/PainelPrincipal/VBoxContainer/HBoxContainer/PainelCrafting" unique_id=1426142652]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/PainelPrincipal/VBoxContainer/HBoxContainer/PainelCrafting/VBoxContainer" unique_id=448136043]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/PainelPrincipal/VBoxContainer/HBoxContainer/PainelCrafting/VBoxContainer" unique_id=603502473]
+layout_mode = 2
+
+[node name="ListaReceitas" type="VBoxContainer" parent="Control/PainelPrincipal/VBoxContainer/HBoxContainer/PainelCrafting/VBoxContainer/ScrollContainer" unique_id=440432204]
+layout_mode = 2
+
+[node name="PainelPersonagem" type="PanelContainer" parent="Control/PainelPrincipal/VBoxContainer/HBoxContainer" unique_id=470867318]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="Control/PainelPrincipal/VBoxContainer/HBoxContainer/PainelPersonagem" unique_id=945957881]
+layout_mode = 2
+columns = 3
+
+[node name="GridContainer" type="GridContainer" parent="Control/PainelPrincipal/VBoxContainer" unique_id=1403320496]
+layout_mode = 2
+columns = 9
+
+[node name="HotbarCopia" type="HBoxContainer" parent="Control/PainelPrincipal/VBoxContainer" unique_id=1383381791]
+layout_mode = 2

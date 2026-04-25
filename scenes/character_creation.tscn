@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://bdrgthn6wyw6l"]
+
+[ext_resource type="Script" uid="uid://ouhiy0lut3r2" path="res://scripts/character_creation.gd" id="1_n44om"]
+
+[node name="CharacterCreation" type="Control" unique_id=776225347]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_n44om")
+
+[node name="BackgroundEscuro" type="ColorRect" parent="." unique_id=850421642]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05882353, 0.039215688, 0.078431375, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=901452662]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer" unique_id=1700109674]
+layout_mode = 2
+
+[node name="PreviewPersonagem" type="SubViewportContainer" parent="CenterContainer/HBoxContainer" unique_id=2077510350]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="CenterContainer/HBoxContainer/PreviewPersonagem" unique_id=420283905]
+size = Vector2i(200, 233)
+
+[node name="Camera2D" type="Camera2D" parent="CenterContainer/HBoxContainer/PreviewPersonagem/SubViewport" unique_id=115640279]
+offset = Vector2(0, -16)
+zoom = Vector2(3, 3)
+
+[node name="PainelOpcoes" type="VBoxContainer" parent="CenterContainer/HBoxContainer" unique_id=882752189]
+layout_mode = 2
+
+[node name="LabelTitulo" type="Label" parent="CenterContainer/HBoxContainer/PainelOpcoes" unique_id=40645644]
+layout_mode = 2
+text = "Criar Personagem"
+horizontal_alignment = 1
+
+[node name="LinhaCorpo" type="HBoxContainer" parent="CenterContainer/HBoxContainer/PainelOpcoes" unique_id=1928332875]
+layout_mode = 2
+
+[node name="BtnCorpoPrev" type="Button" parent="CenterContainer/HBoxContainer/PainelOpcoes/LinhaCorpo" unique_id=567457934]
+layout_mode = 2
+text = "<"
+
+[node name="LabelCorpo" type="Label" parent="CenterContainer/HBoxContainer/PainelOpcoes/LinhaCorpo" unique_id=2014212569]
+layout_mode = 2
+
+[node name="BtnCorpoNext" type="Button" parent="CenterContainer/HBoxContainer/PainelOpcoes/LinhaCorpo" unique_id=114190986]
+layout_mode = 2
+text = ">"
+
+[node name="LinhaCabelo" type="HBoxContainer" parent="CenterContainer/HBoxContainer/PainelOpcoes" unique_id=1086261869]
+layout_mode = 2
+
+[node name="BtnCabeloPrev" type="Button" parent="CenterContainer/HBoxContainer/PainelOpcoes/LinhaCabelo" unique_id=1689239261]
+layout_mode = 2
+text = "<"
+
+[node name="LabelCabelo" type="Label" parent="CenterContainer/HBoxContainer/PainelOpcoes/LinhaCabelo" unique_id=1843383187]
+layout_mode = 2
+
+[node name="BtnCabeloNext" type="Button" parent="CenterContainer/HBoxContainer/PainelOpcoes/LinhaCabelo" unique_id=699972928]
+layout_mode = 2
+text = ">"
+
+[node name="LinhaCorCabelo" type="HBoxContainer" parent="CenterContainer/HBoxContainer/PainelOpcoes" unique_id=2006818795]
+layout_mode = 2
+
+[node name="BtnCorPrev" type="Button" parent="CenterContainer/HBoxContainer/PainelOpcoes/LinhaCorCabelo" unique_id=1982601473]
+layout_mode = 2
+text = "<"
+
+[node name="LabelCor" type="Label" parent="CenterContainer/HBoxContainer/PainelOpcoes/LinhaCorCabelo" unique_id=1149184789]
+layout_mode = 2
+
+[node name="BtnCorNext" type="Button" parent="CenterContainer/HBoxContainer/PainelOpcoes/LinhaCorCabelo" unique_id=30414425]
+layout_mode = 2
+text = ">"
+
+[node name="LinhaRoupa" type="HBoxContainer" parent="CenterContainer/HBoxContainer/PainelOpcoes" unique_id=935230505]
+layout_mode = 2
+
+[node name="BtnRoupaPrev" type="Button" parent="CenterContainer/HBoxContainer/PainelOpcoes/LinhaRoupa" unique_id=2128015118]
+layout_mode = 2
+text = "<"
+
+[node name="LabelRoupa" type="Label" parent="CenterContainer/HBoxContainer/PainelOpcoes/LinhaRoupa" unique_id=1217654402]
+layout_mode = 2
+
+[node name="BtnRoupaNext" type="Button" parent="CenterContainer/HBoxContainer/PainelOpcoes/LinhaRoupa" unique_id=1337496645]
+layout_mode = 2
+text = ">"
+
+[node name="LinhaAcess" type="HBoxContainer" parent="CenterContainer/HBoxContainer/PainelOpcoes" unique_id=661644520]
+layout_mode = 2
+
+[node name="BtnAcessPrev" type="Button" parent="CenterContainer/HBoxContainer/PainelOpcoes/LinhaAcess" unique_id=727333258]
+layout_mode = 2
+text = "<"
+
+[node name="LabelAcess" type="Label" parent="CenterContainer/HBoxContainer/PainelOpcoes/LinhaAcess" unique_id=723197981]
+layout_mode = 2
+
+[node name="BtnAcessNext" type="Button" parent="CenterContainer/HBoxContainer/PainelOpcoes/LinhaAcess" unique_id=426931443]
+layout_mode = 2
+text = ">"
+
+[node name="BtnJogar" type="Button" parent="CenterContainer/HBoxContainer/PainelOpcoes" unique_id=570829073]
+layout_mode = 2
+text = "JOGAR"
+
+[connection signal="pressed" from="CenterContainer/HBoxContainer/PainelOpcoes/LinhaCorpo/BtnCorpoPrev" to="." method="_on_btn_corpo_prev_pressed"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/PainelOpcoes/LinhaCorpo/BtnCorpoNext" to="." method="_on_btn_corpo_next_pressed"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/PainelOpcoes/LinhaCabelo/BtnCabeloPrev" to="." method="_on_btn_cabelo_prev_pressed"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/PainelOpcoes/LinhaCabelo/BtnCabeloNext" to="." method="_on_btn_cabelo_next_pressed"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/PainelOpcoes/LinhaCorCabelo/BtnCorPrev" to="." method="_on_btn_cor_prev_pressed"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/PainelOpcoes/LinhaCorCabelo/BtnCorNext" to="." method="_on_btn_cor_next_pressed"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/PainelOpcoes/LinhaRoupa/BtnRoupaPrev" to="." method="_on_btn_roupa_prev_pressed"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/PainelOpcoes/LinhaRoupa/BtnRoupaNext" to="." method="_on_btn_roupa_next_pressed"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/PainelOpcoes/LinhaAcess/BtnAcessPrev" to="." method="_on_btn_acess_prev_pressed"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/PainelOpcoes/LinhaAcess/BtnAcessNext" to="." method="_on_btn_acess_next_pressed"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/PainelOpcoes/BtnJogar" to="." method="_on_btn_jogar_pressed"]

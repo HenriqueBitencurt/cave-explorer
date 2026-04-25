@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dyr1nx056itb2"]
+
+[ext_resource type="Script" uid="uid://dtxv1xvc0puuh" path="res://scripts/gold.gd" id="1_yna14"]
+[ext_resource type="Texture2D" uid="uid://cnl8g0km0qhgx" path="res://assets/free_props_TileSheet.png" id="2_afqnf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgxkh"]
+size = Vector2(16, 21)
+
+[node name="gold" type="StaticBody2D" unique_id=345873556]
+script = ExtResource("1_yna14")
+
+[node name="sprite2d" type="Sprite2D" parent="." unique_id=628663804]
+position = Vector2(344, 160)
+texture = ExtResource("2_afqnf")
+region_enabled = true
+region_rect = Rect2(80, 48, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1817660249]
+position = Vector2(344, 157.5)
+shape = SubResource("RectangleShape2D_wgxkh")
