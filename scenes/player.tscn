@@ -1627,7 +1627,7 @@ script = ExtResource("1_f1ej7")
 
 [node name="corpo" type="AnimatedSprite2D" parent="." unique_id=1228948771]
 sprite_frames = SubResource("SpriteFrames_3vyb7")
-animation = &"block"
+animation = &"walk"
 
 [node name="olhos" type="AnimatedSprite2D" parent="." unique_id=1716289118]
 sprite_frames = SubResource("SpriteFrames_446j8")

@@ -12,9 +12,11 @@ This project is part of my technical journey in game development and software en
 * Character creation system.
 * Inventory system with gold and item slots.
 * Dynamic UI with custom gold/brown style.
+* **Save & Persistence System:** Implementation of data saving for character progress and customization using `player_data.gd`.
+* **Custom Main Menu:** Personalized user interface with a cohesive visual style for a better player experience.
 ## Mining System:
 * Interaction logic for resource gathering within the cave environment.
-    * Integration between mining actions and inventory updates.
+* Integration between mining actions and inventory updates.
 
 ## 🎓 Academic Goals
 I am a high school student from Mato Grosso, Brazil, documenting my progress to apply for Software Engineering programs in the US (Class of 2028).
