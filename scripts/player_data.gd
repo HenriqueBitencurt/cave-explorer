@@ -61,6 +61,7 @@ const MAX_PERSONAGENS = 6
 # ── SALVAR ──
 func salvar_personagem():
 	var personagens = carregar_todos()
+	print("Personagens antes de salvar: ", personagens)
 
 	var novo = {
 		"nome": nome_personagem,
@@ -72,23 +73,33 @@ func salvar_personagem():
 	}
 
 	if personagem_selecionado >= 0 and personagem_selecionado < personagens.size():
-		# Editando personagem existente
 		personagens[personagem_selecionado] = novo
 	else:
-		# Novo personagem
 		personagens.append(novo)
 
+	print("Personagens depois de salvar: ", personagens)
+	print("Salvando em: ", SAVE_PATH)
+
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
+	if file == null:
+		print("ERRO ao abrir arquivo: ", FileAccess.get_open_error())
+		return
 	file.store_string(JSON.stringify(personagens))
 	file.close()
+	print("Salvo com sucesso!")
 
 # ── CARREGAR TODOS ──
 func carregar_todos() -> Array:
 	if not FileAccess.file_exists(SAVE_PATH):
+		print("Arquivo não existe ainda: ", SAVE_PATH)
 		return []
 	var file = FileAccess.open(SAVE_PATH, FileAccess.READ)
+	if file == null:
+		print("ERRO ao ler arquivo: ", FileAccess.get_open_error())
+		return []
 	var texto = file.get_as_text()
 	file.close()
+	print("Conteúdo do arquivo: ", texto)
 	var resultado = JSON.parse_string(texto)
 	if resultado is Array:
 		return resultado

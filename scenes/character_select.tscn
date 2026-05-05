@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://beahxhtg62n2v"]
+
+[ext_resource type="Script" uid="uid://cucwe8is0t4gk" path="res://scripts/character_select.gd" id="1_x8mhf"]
+
+[node name="character_select" type="Control" unique_id=239412956]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x8mhf")
+
+[node name="BackgroundEscuro" type="ColorRect" parent="." unique_id=737028644]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1225256475]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=183934241]
+layout_mode = 2
+
+[node name="LabelTitulo" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1996554076]
+layout_mode = 2
+text = "Selecionar Personagem"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer/VBoxContainer" unique_id=1144063410]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+
+[node name="ListaPersonagens" type="VBoxContainer" parent="CenterContainer/VBoxContainer/ScrollContainer" unique_id=862885332]
+layout_mode = 2
+
+[node name="BotoesInferiores" type="HBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=2053466551]
+layout_mode = 2
+
+[node name="BtnNovoPersonagem" type="Button" parent="CenterContainer/VBoxContainer/BotoesInferiores" unique_id=1410606997]
+layout_mode = 2
+text = "Novo Personagem"
+
+[node name="BtnJogar" type="Button" parent="CenterContainer/VBoxContainer/BotoesInferiores" unique_id=91177935]
+layout_mode = 2
+text = "Jogar
+"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/BotoesInferiores/BtnNovoPersonagem" to="." method="_on_btn_novo_personagem_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/BotoesInferiores/BtnJogar" to="." method="_on_btn_jogar_pressed"]
